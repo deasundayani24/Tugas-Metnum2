@@ -17,8 +17,8 @@ int a, jarak;
 int x[nmax+1];
 int y[nmax+1];
 float pre[nmax+1], error[nmax+1];
-float m, c, fx, err;
-int totx, toty, toterror=0, totxy=0, totxkuadrat=0, totykuadrat=0, totkuadratx;
+float m, c, fx;
+float totx, toty, err, toterror, totxy=0, totxkuadrat=0, totykuadrat=0, totkuadratx;
 int n, i;
 int kuadratx[nmax+1], kuadraty[nmax+1], xy[nmax+1];
 
@@ -75,16 +75,11 @@ for (i=1; i<=n;i++){
 }
    
 //tampil error tiap prediksi
-printf ("\n================================================");
-printf ("\n========= SELISIH WAKTU (ERROR) ===============\n");
 for (i=1; i<=n;i++){
     printf ("\nSelisih Waktu jika f(x)=%.2f yaitu %.2f \n", pre[i], error[i]);
 }
 
 //tampil nilai error keseluruhan
-printf ("\n=========================");
-// printf ("\nNilai Sigma error = %f \n ", sigmaerror);
-printf ("\n====== ERROR ======\n");
 printf ("\nMaka nilai error sebesar %.2f \n ", err);
    
   return 0;
